@@ -6,7 +6,7 @@ $token = "put_token_here"; //Your bot's token
 
 while(true){
 
-$a = json_decode(file_get_contents("curl -s 'https://api.telegram.org/bot".$token."/getUpdates?timeout=15&offset=".$updid."&limit=100'"),true);
+$a = json_decode(file_get_contents("https://api.telegram.org/bot".$token."/getUpdates?timeout=15&offset=".$updid."&limit=100"),true);
 
 $nr = count(@$a["result"]);
 
